@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+// Components
+import NavBar from "./components/NavBar";
+import AddTask from "./components/AddTask";
+import TaskList from "./components/TaskList";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <div className="container">
+        <div className="row">
+          <div className="col-10-mx-auto">
+            <AddTask />
+            <TaskList />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
